@@ -1,0 +1,9 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:py="http://genshi.edgewall.org/"
+      py:strip="True">
+      <a href="${song_url}"><b>${name}</b></a> - <em>${artist}</em> <a href="${song_url}"><img src="${href('chrome', 'common', 'download.png')}"/></a><br/>
+      <object width="400" height="20" data="${href('chrome', 'tracxspf', 'slim_player.swf')}?song_url=${song_url}&amp;song_title=${song_title}" type="application/x-shockwave-flash">
+          <param name="player_title" value="Xspf : ${song_title}" />
+          <param name="movie" value="${href('chrome', 'tracxspf', 'slim_player.swf')}?song_url=${song_url}&amp;song_title=${song_title}" />
+      </object>
+</html>
